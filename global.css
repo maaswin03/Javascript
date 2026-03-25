@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #b55933;
+  --secondary-color: #a1887d;
+  --bg: #141414;
+  --bg--color: #282828;
+  --bg-secondary-color: #4e4e4e;
+  --text-color: #f1f5f9;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg);
+  box-sizing: border-box;
+}
