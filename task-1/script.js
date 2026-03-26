@@ -22,9 +22,9 @@ form.addEventListener("submit", (e) => {
   const rawdate = new Date();
   const date =
     rawdate.getDay() +
-    "+" +
+    "-" +
     (rawdate.getMonth() + 1) +
-    "+" +
+    "-" +
     rawdate.getFullYear();
 
   const newTask = {

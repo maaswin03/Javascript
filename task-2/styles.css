@@ -1,0 +1,192 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container css with animation */
+.main-container {
+  height: 100vh;
+  padding: 5%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-200px);
+  animation: liftSide 1.2s ease forwards;
+}
+
+@keyframes liftSide {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Sub container css */
+.sub-container {
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 20px;
+  background-color: var(--bg--color);
+}
+
+.sub-container:hover{
+    border: 1px solid var(--primary-color);
+}
+
+/* Dot container */
+.dot {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+    box-sizing: border-box;
+}
+
+.dot-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.dot-container-1 {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.dot-container-1 p {
+  margin: 0;
+  font-size: 12px;
+  padding: 2px 10px;
+  font-weight: 700;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+#red-dot {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 45, 45);
+  border-radius: 50%;
+}
+
+#yellow-dot {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 255, 45);
+  border-radius: 50%;
+}
+
+#green-dot {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(0, 128, 0);
+  border-radius: 50%;
+}
+
+/* Dot hover effect*/
+#red-dot:hover,
+#yellow-dot:hover,
+#green-dot:hover {
+  opacity: 0.8;
+}
+
+.display {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.input-display {
+  color: var(--text-color);
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+  overflow-x: auto;
+  font-size: 40px;
+  transition: font-size 0.2s ease;
+}
+
+.output-display {
+  color: var(--text-color);
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+  overflow-x: auto;
+  opacity: 0.4;
+  font-size: 0px;
+  transition: font-size 0.2s ease;
+}
+
+.display.result-mode .output-display {
+  font-size: 16px;
+}
+
+.display.result-mode .input-display {
+  font-size: 40px;
+}
+
+/* Buttons container css */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: grid;
+  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(4, 50px);
+  gap: 20px;
+}
+
+/* Button css with animations */
+.btn {
+  border-radius: 50%;
+  background-color: var(--bg-secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #f1f5f950;
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+
+  transform: translateY(100px);
+  animation: liftUp 1.2s ease forwards;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.top-btn {
+  background-color: var(--bg-third-color);
+  transform: translateY(-100px);
+  animation: liftUp 1.2s ease forwards;
+}
+
+@keyframes liftUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.operator {
+  background-color: var(--primary-color);
+  border: 1px solid #a1887d;
+  transform: translateX(100px);
+  animation: liftSide 1.2s ease forwards;
+}

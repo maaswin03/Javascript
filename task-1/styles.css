@@ -297,6 +297,7 @@ body {
   background-color: var(--bg--color);
   border-radius: 2px;
   gap: 20px;
+  cursor: pointer;
 }
 
 .task-item:hover {
@@ -574,8 +575,8 @@ body {
 
 .detail-popup {
   position: relative;
-  max-height: 75vh; /* 🔥 IMPORTANT */
-  overflow-y: auto; /* 🔥 ENABLE SCROLL */
+  max-height: 75vh;
+  overflow-y: auto;
 
   width: clamp(300px, 30vw, 400px);
   background-color: var(--bg--color);
