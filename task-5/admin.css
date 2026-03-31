@@ -1,0 +1,120 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Card css */
+.card-main-container {
+  padding: 5%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+}
+
+.card-main-header h2 {
+  color: var(--text-color);
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Card content css */
+
+.card {
+  transform: translateY(30%);
+  animation: transformUp 1s ease forwards;
+}
+
+@keyframes transformUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bg-secondary-color);
+  background-color: var(--bg--color);
+  border-radius: 2px;
+  padding: 2%;
+  gap: 20px;
+  width: 20%;
+}
+
+.card-header p {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-body h2 {
+  color: var(--primary-color);
+  font-size: 40px;
+  margin: 0;
+}
+
+.card-description p {
+  color: var(--secondary-color);
+  font-size: 15px;
+  margin: 0;
+}
+
+.card:hover {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(206, 206, 206, 0.2);
+}
+
+/* Responsive css for card container */
+@media (max-width: 480px) and (max-width: 1024px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .card-main-container {
+    padding: 10% 0;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+table {
+  width: 100%;
+  color: var(--text-color);
+  border-collapse: collapse;
+  border: 1px solid var(--bg-secondary-color);
+  border-radius: 4px;
+}
+
+thead {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--bg-secondary-color);
+}
+
+td,
+th {
+  padding: 10px 20px;
+}
+
+thead,
+tbody {
+  text-align: center;
+}

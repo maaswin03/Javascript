@@ -28,6 +28,7 @@ ui_value.addEventListener("click", (e) => {
   }
 
   ui_input_field.innerText = stack.join("") + user_input || "0";
+  console.log(temp , stack , user_input)
 });
 
 //function to check that the last value is an operator in stack
@@ -159,7 +160,11 @@ function operation(value) {
       digit(value);
     } else if (checkvalue(value) && checklast()) {
       stack.push(value);
-    } else {
+    } 
+    else if(checkvalue(value) && !checklast()){
+      stack.pop();
+      stack.push(value);
+    }else {
       return;
     }
   } else {

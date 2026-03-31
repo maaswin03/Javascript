@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>Task 6 - Drag and Drop</title>
+  </head>
+  <body>
+    <!-- Todo List header with title and create button-->
+    <header class="header-container">
+      <!-- header with title-->
+      <div class="header-head">
+        <h2>Focus Tracker</h2>
+      </div>
+
+      <!-- header with create button-->
+      <div class="header-button">
+        <a href="#add-task">Create Task</a>
+      </div>
+    </header>
+
+    <!-- Main content with form to add new task and cards for showing values-->
+    <main class="main-container" id="add-task">
+      <!-- form to add new task -->
+      <section class="form-container">
+        <form id="task-form" class="task-form">
+          <div class="sub-task-form">
+            <h2>Add New Task</h2>
+          </div>
+          <div class="sub-task-form">
+            <!-- task title field -->
+            <div class="label-input-form">
+              <label for="task-title">Task Title</label>
+              <input
+                type="text"
+                id="task-title"
+                name="title"
+                placeholder="Enter task title"
+                required
+              />
+            </div>
+
+            <!-- task due date field -->
+            <div class="label-input-form">
+              <label for="task-due">Due Date</label>
+              <input type="date" id="task-due" name="dueDate" required />
+            </div>
+
+            <!-- task priority field -->
+            <div class="label-input-form">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority" name="priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- task description field -->
+          <div class="sub-task-form">
+            <div class="label-input-form">
+              <label for="task-desc">Task Description</label>
+              <textarea
+                id="task-desc"
+                name="description"
+                rows="4"
+                placeholder="Enter task description"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- submit button -->
+          <div class="sub-task-form">
+            <button type="submit" class="form-button">Add Task</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- cards for showing values-->
+      <section class="card-main-container">
+        <div class="card-main-header">
+          <h2>Task Overview</h2>
+        </div>
+        <!-- cards will be added here dynamically -->
+        <div class="card-container">
+          <!-- card for total tasks -->
+          <div class="card">
+            <div class="card-header">
+              <p>Total Tasks</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-total-task-value">0</h2>
+            </div>
+            <div class="card-description">
+              <p>All tasks created</p>
+            </div>
+          </div>
+
+          <!-- card for completed tasks -->
+          <div class="card">
+            <div class="card-header">
+              <p>Completed</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-completed-value">0</h2>
+            </div>
+            <div class="card-description">
+              <p>Tasks finished</p>
+            </div>
+          </div>
+
+          <!-- card for pending tasks -->
+          <div class="card">
+            <div class="card-header">
+              <p>Pending</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-pending-value">0</h2>
+            </div>
+            <div class="card-description">
+              <p>Tasks remaining</p>
+            </div>
+          </div>
+
+          <!-- card for progress -->
+          <div class="card">
+            <div class="card-header">
+              <p>Progress</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-progress-value">0%</h2>
+            </div>
+            <div class="card-description">
+              <p>Overall completion</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section for task list -->
+      <section class="task-main-container">
+        <div class="card-main-header">
+          <h2>Task List</h2>
+        </div>
+        <!-- task list will be added here dynamically -->
+        <div class="task-list">
+          <!-- individual task items will be added here -->
+        </div>
+        <div class="empty-task-list" id="empty-task-list">
+          <h2>No tasks yet</h2>
+          <p>You don’t have any tasks. Start by adding a new one.</p>
+          <a href="#add-task">Add Task</a>
+        </div>
+      </section>
+
+      <!-- popup for task added successfully -->
+      <section id="add-task-success" class="popup-at-container">
+        <!-- popup header content -->
+        <a href="#" class="modal-overlay"></a>
+        <div class="at-popup">
+          <div class="at-sub-popup-header">
+            <h2>Task added !</h2>
+            <a href="#">x</a>
+          </div>
+
+          <!-- Popup body content -->
+          <div class="at-sub-popup">
+            <p>Your task has been added to the list.</p>
+
+            <div class="at-popup-buttons">
+              <a href="#" class="task-delete-button">Close</a>
+              <a href="#" class="task-complete-button">Done</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- popup for task deletion -->
+      <section id="delete-task-confirm" class="popup-at-container">
+        <!-- popup header content -->
+        <a href="#" class="modal-overlay"></a>
+        <div class="at-popup">
+          <div class="at-sub-popup-header">
+            <h2>Are you sure ?</h2>
+            <a href="#">x</a>
+          </div>
+
+          <!-- Popup body content -->
+          <div class="at-sub-popup">
+            <p>
+              This task will be permanently deleted. This action cannot be
+              undone.
+            </p>
+
+            <div class="at-popup-buttons">
+              <a href="#" class="task-delete-button">Close</a>
+              <a href="#" class="task-complete-button">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- popup for task full View -->
+      <section id="detail-task-Popup" class="popup-at-container">
+        <!-- popup header content -->
+        <a href="#" class="modal-overlay"></a>
+        <div class="detail-popup">
+          <div class="detail-sub-popup-header">
+            <h2>Title</h2>
+            <a href="#">x</a>
+          </div>
+
+          <!-- Popup body content -->
+          <div class="detail-sub-popup">
+            <p>
+              This task will be permanently deleted. This action cannot be
+              undone.
+            </p>
+
+            <div class="detail-item-footer">
+              <span>On : 30-03-2026</span>
+              <span>High</span>
+              <span>Due : 23-03-2026</span>
+            </div>
+
+            <div class="detail-popup-buttons">
+              <a href="#" class="task-delete-button">Close</a>
+              <button class="task-complete-button">Delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

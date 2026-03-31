@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>Task-7 Chat App</title>
+  </head>
+  <body>
+    <aside class="sidebar-container" id="sidebar-container">
+      <div class="sidebar-header">
+        <input type="text" placeholder="Search conversation" />
+        <button type="click">+</button>
+      </div>
+
+      <div class="sidebar-body"></div>
+    </aside>
+    <main class="main-container">
+      <section class="start-card" id="start-card">
+        <div class="start-card-body">
+          <h1>Welcome to Chat App</h1>
+          <form>
+            <label for="user-name">Username</label>
+            <input
+              type="text"
+              id="user-name"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+            <button type="submit" id="start-button">Start Chat</button>
+          </form>
+        </div>
+        <div class="start-card-footer">
+          <p>Chat with your friends in real time!</p>
+        </div>
+      </section>
+      <section class="main-header" id="main-section">
+        <div class="header-left">
+          <div class="header-image"><p id="badge">D</p></div>
+          <div class="header-container">
+            <h2>Divya</h2>
+            <p class="message">Online</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn">
+            <i class="fa fa-phone"></i>
+          </button>
+          <button class="icon-btn">
+            <i class="fa fa-video-camera"></i>
+          </button>
+        </div>
+      </section>
+      <section class="main-body"></section>
+      <section class="main-footer">
+        <div class="input-container">
+          <textarea placeholder="Type a message..."></textarea>
+          <button class="send-btn"><i class="fa fa-send-o"></i></button>
+        </div>
+      </section>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>

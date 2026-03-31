@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "username": "hello",
+      "id": "9pmhSrs9mNk"
+    },
+    {
+      "username": "Aswin",
+      "id": "7pmhSrs9mNk"
+    }
+  ],
+  "messages": [
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "Hey Aswin! 👋",
+      "timestamp": "2026-03-31T10:00:00",
+      "id": "msg1"
+    },
+    {
+      "sender_id": "7pmhSrs9mNk",
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "Hey! How are you? 😄",
+      "timestamp": "2026-03-31T10:01:00",
+      "id": "msg2"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "I am good! Did you finish the project?",
+      "timestamp": "2026-03-31T10:02:00",
+      "id": "msg3"
+    },
+    {
+      "sender_id": "7pmhSrs9mNk",
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "Almost done ✅",
+      "timestamp": "2026-03-31T10:03:00",
+      "id": "msg4"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "hiii",
+      "timestamp": "2026-03-31T12:34:04.109Z",
+      "id": "A8ivpmd-vt8"
+    },
+    {
+      "sender_id": null,
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "hii",
+      "timestamp": "2026-03-31T12:34:50.376Z",
+      "id": "m-Hn9XJA6pE"
+    },
+    {
+      "sender_id": "7pmhSrs9mNk",
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "hii",
+      "timestamp": "2026-03-31T12:35:22.674Z",
+      "id": "FrXzLOUw7AU"
+    },
+    {
+      "sender_id": "7pmhSrs9mNk",
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "what ur doing",
+      "timestamp": "2026-03-31T12:35:36.825Z",
+      "id": "F6lN55KIeGg"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "hii",
+      "timestamp": "2026-03-31T12:39:26.113Z",
+      "id": "7VTOlS7yLaY"
+    },
+    {
+      "sender_id": "7pmhSrs9mNk",
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "i am busy in work",
+      "timestamp": "2026-03-31T12:39:42.198Z",
+      "id": "t5nG8nL97uc"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "how was ur work going",
+      "timestamp": "2026-03-31T12:39:52.180Z",
+      "id": "LICGbintIVU"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "hio",
+      "timestamp": "2026-03-31T15:29:02.285Z",
+      "id": "MENPq-OlV9g"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "jiok",
+      "timestamp": "2026-03-31T15:29:06.118Z",
+      "id": "h3x2RReCDBA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

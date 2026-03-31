@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../task-1/styles.css"/>
+    <link rel="stylesheet" href="../global.css" />
+    <title>Task 5 - Quiz App</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- cards for starting quiz and showing questions -->
+      <section class="start-card">
+        <div class="start-card-body">
+          <h1>Welcome to the Quiz App</h1>
+          <form>
+            <label for="user-name">Username</label>
+            <input
+              type="text"
+              id="user-name"
+              name="username"
+              placeholder="Enter your Username"
+              required
+            />
+            <button type="button" id="start-button">Start Quiz</button>
+          </form>
+        </div>
+        <div class="start-card-footer">
+          <p>Test your knowledge with our fun quiz!</p>
+        </div>
+      </section>
+      <!-- quiz card for showing questions and options -->
+      <section class="quiz-card">
+        <div class="quiz-card-body">
+          <p id="question">What is the capital of France?</p>
+          <div class="options-container">
+            <button class="option-button" data-answer="Paris">Paris</button>
+            <button class="option-button" data-answer="London">London</button>
+            <button class="option-button" data-answer="Rome">Rome</button>
+            <button class="option-button" data-answer="Berlin">Berlin</button>
+          </div>
+          <div id="result"></div>
+        </div>
+      </section>
+
+      <!-- cards for showing values-->
+      <section class="result-card">
+        <div class="card-main-header">
+          <h2>Quiz Performance</h2>
+        </div>
+        <!-- cards will be added here dynamically -->
+        <div class="card-container">
+          <!-- card for total tasks -->
+          <div class="card">
+            <div class="card-header">
+              <p>Total Questions</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-total-ques-value">5</h2>
+            </div>
+            <div class="card-description">
+              <p>Questions attempted</p>
+            </div>
+          </div>
+
+          <!-- card for completed tasks -->
+          <div class="card">
+            <div class="card-header">
+              <p>Correct</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-completed-value">3</h2>
+            </div>
+            <div class="card-description">
+              <p>Answers correct</p>
+            </div>
+          </div>
+
+          <!-- card for pending tasks -->
+          <div class="card">
+            <div class="card-header">
+              <p>Wrong</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-pending-value">2</h2>
+            </div>
+            <div class="card-description">
+              <p>Answers incorrect</p>
+            </div>
+          </div>
+
+          <!-- card for progress -->
+          <div class="card">
+            <div class="card-header">
+              <p>Score</p>
+            </div>
+            <div class="card-body">
+              <h2 id="card-progress-value">60%</h2>
+            </div>
+            <div class="card-description">
+              <p>Performance</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-main-footer">
+          <button type="button" id="reset-button">Reset Quiz</button>
+        </div>
+      </section>
+
+      <section id="add-task-success" class="popup-at-container">
+        <!-- popup header content -->
+        <a href="#" class="modal-overlay"></a>
+        <div class="at-popup">
+          <div class="at-sub-popup-header">
+            <h2>User Already Exists</h2>
+            <a href="#">x</a>
+          </div>
+
+          <!-- Popup body content -->
+          <div class="at-sub-popup">
+            <p>This username has already attempted the quiz. Please try a different name.</p>
+
+            <div class="at-popup-buttons">
+              <a href="#" class="task-delete-button">Close</a>
+              <a href="#" class="task-complete-button">Done</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

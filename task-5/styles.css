@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+.start-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.start-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg--color);
+  width: clamp(300px, 60vw, 500px);
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--bg-secondary-color);
+  transform: translateX(-500px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+.start-card-body h1 {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-card-body label{
+  color: var(--text-color);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.start-card-body input {
+  background-color: transparent;
+  border: 1px solid var(--bg-secondary-color);
+  padding: 10px 5px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-family: "Space Grotesk", sans-serif;
+  outline: none;
+}
+
+.start-card-body input::placeholder {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.start-card-body button {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+}
+
+.start-card-body button:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+.start-card-footer {
+  width: clamp(300px, 60vw, 500px);
+  margin-top: 12px;
+}
+
+.start-card-footer p {
+  color: var(--secondary-color);
+  font-size: 14px;
+  margin: 0;
+}
+
+.quiz-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  display: none;
+}
+
+.quiz-card-body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  width: clamp(300px, 60vw, 500px);
+  padding: 2%;
+  border-radius: 4px;
+  background-color: var(--bg--color);
+  border: 1px solid var(--bg-secondary-color);
+  transform: translateX(-500px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#question {
+  color: var(--text-color);
+}
+
+.options-container button {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid var(--bg-secondary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.options-container button:hover {
+  border: 1px solid var(--primary-color);
+}
+
+/* Card css */
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: none;
+}
+
+.card-main-container {
+  padding: 5%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+}
+
+.card-main-header h2 {
+  color: var(--text-color);
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+/* Card content css */
+
+.card {
+  transform: translateY(300px);
+  animation: transformUp 1s ease forwards;
+}
+
+@keyframes transformUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bg-secondary-color);
+  background-color: var(--bg--color);
+  border-radius: 2px;
+  padding: 2%;
+  gap: 20px;
+  width: 20%;
+}
+
+.card-header p {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-body h2 {
+  color: var(--primary-color);
+  font-size: 40px;
+  margin: 0;
+}
+
+.card-description p {
+  color: var(--secondary-color);
+  font-size: 15px;
+  margin: 0;
+}
+
+.card:hover {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(206, 206, 206, 0.2);
+}
+
+.card-main-footer button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  font-family: "Space Grotesk", sans-serif;
+  transform: translateY(500px);
+  animation: transformUp 1s ease forwards;
+}
+
+/* Responsive css for card container */
+@media (max-width: 480px) and (max-width: 1024px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .result-card {
+    padding: 10% 20%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

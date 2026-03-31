@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "maaswin02",
+      "id": "qv7ZtIhZ8ZE"
+    }
+  ],
+  "formdata": [
+    {
+      "user_id": "qv7ZtIhZ8ZE",
+      "questions": 5,
+      "correct": 5,
+      "wrong": 0,
+      "percentage": 100,
+      "id": "_KIMiOHtTmw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
