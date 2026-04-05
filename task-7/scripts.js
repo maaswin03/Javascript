@@ -65,7 +65,7 @@ async function updateSidebar() {
               <h2>${item.username}</h2>
               <p>Today</p>
             </div>
-            <p>Say hi! 👋</p>
+            <p>Say hi!</p>
           </div>
             `;
       contact.appendChild(card);

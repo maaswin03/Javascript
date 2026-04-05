@@ -100,6 +100,20 @@
       "text": "jiok",
       "timestamp": "2026-03-31T15:29:06.118Z",
       "id": "h3x2RReCDBA"
+    },
+    {
+      "sender_id": "9pmhSrs9mNk",
+      "receiver_id": "7pmhSrs9mNk",
+      "text": "hii",
+      "timestamp": "2026-04-01T05:27:02.123Z",
+      "id": "8AE04kFx2Uw"
+    },
+    {
+      "sender_id": "7pmhSrs9mNk",
+      "receiver_id": "9pmhSrs9mNk",
+      "text": "hello",
+      "timestamp": "2026-04-01T05:27:14.539Z",
+      "id": "QUhrtB7StCQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -3,6 +3,10 @@
     {
       "username": "maaswin02",
       "id": "qv7ZtIhZ8ZE"
+    },
+    {
+      "username": "hello",
+      "id": "953rdEUC0Nk"
     }
   ],
   "formdata": [
@@ -13,6 +17,14 @@
       "wrong": 0,
       "percentage": 100,
       "id": "_KIMiOHtTmw"
+    },
+    {
+      "user_id": "953rdEUC0Nk",
+      "questions": 5,
+      "correct": 2,
+      "wrong": 3,
+      "percentage": 40,
+      "id": "ViANU-a0ZFs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

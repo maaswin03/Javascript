@@ -1,0 +1,257 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+/* Services Sections css with target for showing*/
+
+#services{
+  display: block;
+  padding: 7% 10% 0 10%;
+}
+
+/* About Sections css with target for showing*/
+
+#about{
+  display: block;
+  padding: 7% 10% 0 10%;
+}
+
+.about-section-1 {
+  transform: translateX(-50px);
+  animation: slideUp 1s ease forwards;
+}
+
+.about-section-2 {
+  transform: translateX(50px);
+  animation: slideUp 1s ease forwards;
+}
+
+.about-section-3 {
+  transform: translateY(150px);
+  animation: slideUp 1s ease forwards;
+}
+
+.about-section-4 {
+  transform: translateY(-150px);
+  animation: slideUp 1s ease forwards;
+}
+
+
+@keyframes slideUp {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.about-description {
+  font-size: 16px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 3%;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.card:hover .logo {
+  background-color: #10b98133;
+  border-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+/* Team Sections css with target for showing*/
+
+#team{
+  display: block;
+  padding: 7% 10% 0 10%;
+}
+
+/* Contact Sections css with target for showing*/
+
+#contact{
+  display: block;
+  padding: 10% 10% 0 10%;
+}
+
+/* Contact section (left side) design properties*/
+
+.contact-main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.contact-heading {
+  font-size: 18px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.contact-description {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info div {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  display: flex;
+  gap: 5%;
+  padding: 2% 2% 2% 2%;
+}
+
+.contact-phone:hover .logo,
+.contact-email:hover .logo {
+  background-color: #10b98133;
+  border-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.contact-phone:hover,
+.contact-email:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+/* Contact section (right side) design properties*/
+
+.contact-container {
+  border: 1px solid var(--color-border);
+  padding: 2%;
+  border-radius: 5px;
+}
+
+.contact-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+  color: var(--color-text-secondary);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.contact-form label {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.primary-btn {
+  margin-top: 5%;
+  transform: translateY(4px);
+}
+
+@media (max-width: 768px) {
+  .contact-main-container {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    margin-top: 5%;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Nav links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (width >= 480px) and (width <= 1024px) {
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide normal nav */
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: #0f172a;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: 0.3s ease;
+    gap: 20px;
+  }
+
+  /* When menu is open */
+  #menu-toggle:checked ~ .navbar-links {
+    left: 0;
+  }
+}
+
+
+
